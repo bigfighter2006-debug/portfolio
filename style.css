@@ -538,3 +538,78 @@ body {
     transform: translateX(-50%) scale(1);
     top: -1.8rem;
 }
+
+/* ================== RESPONSIVE DESIGN ================== */
+@media screen and (max-width: 1200px) {
+    html { font-size: 85%; }
+}
+
+@media screen and (max-width: 991px) {
+    html { font-size: 75%; }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-y: auto;
+        align-items: flex-start;
+        padding: 2rem 0;
+    }
+    .wrapper {
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+        animation: none;
+        perspective: none;
+    }
+    .book {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        perspective: none;
+    }
+    .book .book-page {
+        position: relative;
+        width: 100%;
+        height: auto;
+        box-shadow: 0 0 15px rgba(0,0,0,0.2) !important;
+        margin-bottom: 2rem;
+        border-radius: 1rem;
+        padding: 1.5rem;
+    }
+    .book-page.page-right {
+        transform: none !important;
+        transition: none !important;
+    }
+    .book-page .page-front,
+    .book-page .page-back {
+        position: relative;
+        width: 100%;
+        height: auto;
+        transform: none !important;
+        padding: 0;
+        border-radius: 0;
+        background: transparent;
+        margin-bottom: 3rem;
+    }
+    .cover {
+        display: none !important;
+    }
+    .nextprev-btn, .number-page {
+        display: none !important;
+    }
+    .back-profile {
+        position: relative;
+        margin: 0 auto;
+        bottom: 0;
+        right: 0;
+    }
+    .contact-box textarea {
+        height: 10rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    html { font-size: 65%; }
+    .profile-page h1 { font-size: 2.2rem; }
+    .workeduc-box .workeduc-content { padding-left: 1rem; }
+}
